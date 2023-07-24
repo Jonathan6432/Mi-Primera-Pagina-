@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" lang="es" content="Jonathan Cordoba">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/Formulario2.css">
+
+    <link rel="stylesheet" type="text/css" href="./iconos/iconos.css">
+
+   <!-----Con este link agregamos la ruta para vincular los iconos desde la web-->
+
+    <link href="https://file.myfontastic.com/dyh5tZo3zZvR8L5QZZFBGG/icons.css" rel="stylesheet">
+
+    <!-------------------------------------------------------------------------------------->
+
+
+<!--------Vinculo de familia de fuentes desde google font -->
+<!-- Esta es otra familia de fuentes desde google font En el menu se ve reflejado
+ font-family: 'Lobster', cursive; -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+    <title>Formulario Registro</title>
+
+</head>
+
+<body>
+  
+        <header class="encabezado">
+            <nav>
+                <a href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/index.html.html"><Img src="./Imagen/logo.png">
+                    <div><H2> El Perro Dorado</H2></a></div>
+        
+                <ul>
+                    <li class="padre"> <a href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/index.html.html">Inicio</a></li>
+                    <li class="padre"><a href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/Donaciones.html">Donación</a>
+                    <li class="padre">
+                        <a href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/Preguntas%20Golden.html">Preguntas</a>
+            
+                        <li class="padre">
+                            <a href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/formulario2.html#">Registrarse</a>
+                            
+                        </li>
+            
+                    <li class="padre"><a href="#contacto">Contacto</a>
+                    </li>
+                   
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+    <header>
+
+        
+
+        <section class="ContenedorTotal">
+          <!---representa una seccion donde hay un formulario-->
+           <form action="formulario">
+
+            <!--- permite organizar en grupos los campos de un formulario.-->
+            <fieldset class="Formulario">
+           <h1>Registrarse</h1>
+         
+            <article class="contenedor1">
+                <span class="icon-user-1"></span>
+
+             
+            <!-- Elemento etiqueta o label -->
+            <label for="P_Nombres">Nombre completo</label>
+            <!-- Elemento o cuadro de texto para que el usuario digite el Nombre-->
+         <input type="text" name="Nombre" id="P_Nombre" placeholder="Ingrese su nombre y apellidos" maxlength="50" minlength="3" size="25" required> </imput> <br>
+        </article>
+        <article class="contenedor">
+         <!--Elemento etiqueta o label -->
+         <span class="icon-envelope-o"></span>
+   <label for="Email">Email : </label>
+   <!-- Elemento o cuadro de texto para que el usuario ingrese el email-->
+  <input type="Email" id="Email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+  [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"  list="defaultEmails" 
+   size="30" 
+  placeholder="usuario@ejemplo.com" maxlength="50" required> </imput><br>
+</article>
+<article class="contenedor2">
+  <span class="icon-key"></span>
+  <label for="Contraseña">Contraseña</label>
+         <input type="password" name="Contraseña"  placeholder="Contraseña" required> </imput> <br>
+        </article>
+
+        <article class="contenedor">
+         <input  id="btn_env" type="submit" value="Registrarse" class="button">
+        <p>Al registrarse, acepta las condiciones de uso y politica de privacidad.</p><br>
+    </article>
+    
+    <article class="contenedor">
+        <p>¿Ya tiene unas cuenta? <a clase="link" 
+            href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/Formulario3YA.html"> Iniciar Sesion</a></p>
+        </article>
+
+            
+    </article>
+
+    </fieldset>
+           </form>
+        </section>
+         
+
+        <video autoplay loop>
+            <source src="./Video/barco.mp4">
+        </video>
+
+        
+        <!--imagen para adoptar cachorros-->
+        <Section class="adopción">
+            <a href="file:///C:/Users/Familia/Documents/Documentos%20Jonathan/www/Adopciones.html"> <img src="https://img.freepik.com/vector-gratis/adorable-perro-sentado-dibujos-animados_74769-13.jpg?w=2000" alt=""></a>
+            <h1>Adoptame</h1>
+            </Section>
+        <footer>
+            
+                <h2 class="Titulo" id="contacto"> Contacta conmigo</h2>
+
+              
+                <section class="redes">
+                    <a href="https://www.facebook.com/"><span class="icon-facebook"></span></a>
+                    <a href="https://twitter.com/home"><span class="icon-twitter"></span></a>
+                    <a href="https://www.youtube.com/?gl=CO&hl=es-419" ><span class="icon-youtube"></span></a>
+                 
+                    <!--icono desde una ruta relativa-->
+                    <a href="https://wa.me/message/FYE2T2CWGZNGM1"><span class="icon-whatsapp"></span></a>
+
+    
+            </section>
+            <hr>
+            <section class="Texto">
+                <p class="copy">Creado por Jonathan Cordoba </p>
+            </section>
+        </footer>
+
+    </header>
+    
+   
+</body>
+</html>

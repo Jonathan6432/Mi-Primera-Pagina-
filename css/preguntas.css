@@ -1,0 +1,296 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado{
+background-image: url(../Imagen/estrellas.jpg);
+background-repeat: no-repeat;
+background-size:cover; 
+background-attachment: fixed;
+background-position: center;
+ /*para que el menu este fijo como un menu pegajoso*/
+ position:sticky;
+    /*con este valor siempre se va a mantener en la parte superior y sin margen*/
+    top:0px;
+
+ }
+
+ 
+ 
+ a img{
+     width: 70px;
+    
+ }
+ 
+ div a h2{
+
+text-decoration: none;
+list-style:none;
+ font-family: 'Berkshire Swash', cursive;
+ font-size: 30px;
+ margin-right:200px;
+ color: rgb(243, 207, 6);
+ text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+
+ }
+ 
+ div a h2:hover{
+     transform: scale(0.9);
+     transition: all 0.7s linear;
+    }
+ /*se activa el display flex y con jusify-content los menus se distribuyen uniformemete vertical
+ de manera que el espacio entre ellos sea el mismo con el de la imagen y el titulo  */
+ .encabezado nav{
+ display: flex;
+ justify-content:space-around;
+ align-items: center;
+ padding: 20px;
+ 
+ 
+ }
+ /*se le quita el punto que por defecto viene
+ con las listas anidadas y se activa el display para despues agregar el justify:space-between
+ para ubicar los menus de manera horizontal y cada sub menu se ubique debajo de su respectivo menu 
+ Se le agrega el estilo a los padres de los sub menus  */
+ .padre{
+    
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+     
+ 
+ }
+ .encabezado nav ul{
+    list-style:none;
+    display: flex;
+    justify-content: space-around;
+    font-size:x-large;
+    padding: 10px;
+    flex-wrap: wrap;
+    
+    
+ 
+    
+ }
+ /*para ubicar los sub menus de manera vertical debajo de su respectivo menu*/
+ .encabezado nav ul li ul{
+     display: flex;
+     flex-direction: column;
+     
+    
+ }
+ 
+ .encabezado nav ul li ul{
+     /*Los sub menus se ubican debajo de la etiqueta padre*/
+     position: absolute;
+     background-image: url(../Imagen/huesos.jpg);
+     background-repeat: no-repeat;
+     background-size:cover;
+     
+ 
+    
+    
+    
+ }
+ .encabezado nav ul li ul li{
+     /*La anchura que tiene la caja de los sub menus*/
+     width: 200px;
+    
+   
+ }
+ .encabezado nav ul li ul li ul{ 
+     /*se ubican debajo sobre su etiqueta padre*/
+     position: absolute;
+ /*se ubican a la derecha los sub sub menus*/  
+     left: 170px;
+     background-image: url(../Imagen/huesos.jpg);
+     background-repeat: no-repeat;
+     background-size:cover;
+ }
+ .encabezado nav ul li ul{
+   /*Con esta etiqueta lo que hacemos es ocultar los sub menus*/
+     display: none;
+ }
+ .encabezado nav ul li:hover > ul{
+     /*Y cuando pasen el cursor por la primera etiqueta li o la padre de todas aparencan*/
+     display: block;
+ }
+ 
+ /*Se quita la line que por defecto tiene un link y se le agrega un espacio de alto y de ancho a todas las letras
+ y con el disply:block ocupa todo el ancho que puede tener cada letra */
+ li a{
+     font-family: 'Berkshire Swash', cursive;
+     text-decoration: none;
+     font-size:25px;
+     color: rgb(6, 176, 243);
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+  
+ 
+     
+     /*Espacio de relleno de la caja alto y ancho */
+     padding: 12px 20px ;
+     /*para que las letras ocupen todo el ancho que puedan pero verticalmente */
+     display: block;
+     /*Con este valor las letras seran mas gruesas y tambien puede ponerla en negrilla*/
+     font-weight: 600;
+ }
+ /*Cada vez que se pase el cursor por los menus y sub menus van a cambiar de color*/
+ a:hover{
+     background:#9bddf7;
+     
+     border-radius: 20px;
+ }
+ .Preguntas{
+    /*estos valores son para Agregar al contenedor una imagen de fonde desde la carpeta */
+   
+background-image: url(../Imagen/huesos.jpg);
+background-repeat: no-repeat;
+background-size:cover; 
+background-attachment: fixed;
+background-position: center;
+
+
+}
+
+.fondo{
+    /*Este valor nos sirve para agregar un degradado de tres colores a la imagen de huesos.jpg*/
+    background: linear-gradient(130deg,rgba(228, 100, 8, 0.779),#216bff,#eed80d);
+}
+
+.Preguntas h1{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:15px 20px;
+    color: rgb(6, 176, 243);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+
+
+}
+.Preguntas h2{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:15px 20px;
+
+color: rgb(241, 217, 2);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+
+}
+
+.Preguntas p{
+    font-size: 30px;
+color: rgb(21, 21, 20);
+    padding: 20px 50px;
+  
+}
+
+
+/*Estilos pied de pagina */
+footer{
+    
+ background-image: url(../Imagen/estrellas.jpg);
+background-repeat: no-repeat;
+background-size:cover; 
+background-attachment: fixed;
+background-position: center;
+padding: 5%;
+
+}
+footer .Titulo{
+    color: rgb(2, 193, 241);
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+    
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 5%;
+
+    
+   
+}
+
+
+footer .copy{
+    color: rgb(243, 238, 237);
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+ 
+}
+.icon-facebook{
+    color: blue;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(98, 111, 228), 0 0 0.2em rgb(0, 37, 112);
+}
+
+.icon-twitter{
+    color: rgb(62, 178, 255);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+}
+
+.icon-youtube{
+    color: red;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+}
+
+.icon-whatsapp{
+    color:#52ef0f;
+    text-shadow: 1px 1px 2px rgb(65, 211, 12), 0 0 1em rgb(148, 225, 120), 0 0 0.2em rgb(87, 239, 22);
+   
+}
+
+.icon-users{
+    color: aqua;
+
+}
+/*para que el cambio de una secion de la pagina no sea tan brusco*/
+html{
+    scroll-behavior:smooth;
+}
+
+
+/*las letras que contienen los submenus para hacerlas mas pequeñas*/
+.submenu{
+    font-size: 18px;
+    color: rgb(228, 196, 18);
+}
+
+#mucho_pelo,
+#comoselleva,
+#ladradores,
+#vivir{
+   scroll-margin-top: 6ex;
+}
+/*definimos un margen superior cuando tenemos desplazamientos en una seccion de la pagina se le agrega a todos las secciones que tienen un id en html sirve para que el menu pegajoso no se ubique ensima del lugar donde queremos desplazarnos */
+
+.adopción{
+
+    /*Estos valores son para la imagen de adoptame que se encuentra a lado derecho de la pagina */
+    position:fixed;
+    bottom: 20px;
+   right: 0px;
+  
+ }
+ 
+ .adopción img{
+     border-radius: 50%;
+ }
+ 
+ .adopción h1{
+     font-size: 25px;
+     color: #f3d512;
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+     margin-right: 10px;
+     background-color: #14bbe4;
+    padding: 5px;
+ }
+ 
+ .adopción:hover{
+     transform: scale(0.9);
+    
+    }
+ 
+ 

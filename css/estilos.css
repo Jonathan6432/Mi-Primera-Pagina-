@@ -1,0 +1,752 @@
+/*Familia de fuentes ruta relativa */
+@font-face {
+    
+
+    font-family: AdorFuent;
+    src: local(Kaldevaderibbon);
+    src: url(../Fuentes/Kaldevaderibbon.ttf);
+
+}
+/*Familia de fuentes ruta relativa */
+@font-face {
+    
+    font-family:Duty;
+    src: local(Dutch-Harley);
+    src: url(../Fuentes/Dutch\ &\ Harley.ttf);
+}
+
+
+body{
+    background-image: url(../Imagen/huesos.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+background-attachment: fixed;
+background-position: center;
+margin-right: 10px;
+margin-left: 10px;
+   
+}
+
+
+.Titulo{
+    font-family: 'Berkshire Swash', cursive;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(247, 99, 35);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+    background-color: burlywood;
+}
+
+
+.Titulo2{
+    font-family: Duty;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(241, 249, 10);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(232, 78, 12), 0 0 0.2em rgb(232, 222, 23);
+}
+
+/*Normal mente la pagina por defecto crea un borde
+ alrededor de ella por eso se le agrega la etiqueta universal
+  y se pone el valor de 0 tanto de alto como de ancho*/
+*{
+    padding: 0%;
+    margin: 0%;
+}
+p{
+    padding: 20px 50px;
+}
+
+.encabezado{
+  
+    /*para que el menu este fijo como un menu pegajoso*/
+    position:sticky;
+    /*con este valor siempre se va a mantener en la parte superior y sin margen*/
+    top:0px;
+    background: transparent;
+
+}
+
+a img{
+    width: 70px;
+   
+}
+
+div a h2{
+
+padding: 12px 5px ;
+font-family: 'Berkshire Swash', cursive;
+font-size: 40px;
+margin-right:150px;
+color: rgb(243, 180, 6);
+text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+/*con este valor ingreso las lineas decorativas*/
+text-decoration: rgb(223, 112, 0) overline underline wavy;
+
+}
+
+div a h2:hover{
+    /*Este efecto hover es para que el titulo se mueva para atras y hacia delante*/
+    transform: scale(0.9);
+    transition: all 0.7s linear;
+   }
+/*se activa el display flex y con jusify-content los menus se distribuyen uniformemete vertical
+de manera que el espacio entre ellos sea el mismo con el de la imagen y el titulo  */
+.encabezado nav{
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding: 20px;
+
+}
+/*
+Se le agrega el estilo a los padres de los sub menus  */
+.padre{
+    text-decoration: rgb(225, 99, 3) overline underline wavy;
+    /*con este valor ingreso las lineas decorativas en los padres de los menus*/
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+}
+.encabezado nav ul{
+   list-style:none;
+   display: flex;
+   justify-content: space-between;
+   font-size:x-large;
+   padding: 10px;
+   flex-wrap: wrap;
+   
+}
+/*para ubicar los sub menus de manera vertical debajo de su respectivo menu*/
+.encabezado nav ul li ul{
+    display: flex;
+    flex-direction: column;
+     
+}
+
+.encabezado nav ul li ul{
+    /*Los sub menus se ubican debajo de la etiqueta padre*/
+    position: absolute;
+    background-image: url(../Imagen/huesos.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+   
+}
+.encabezado nav ul li ul li{
+    /*La anchura que tiene la caja de los sub menus*/
+    width: 180px;
+}
+
+.encabezado nav ul li ul li ul{ 
+    /*se ubican debajo sobre su etiqueta padre*/
+    position: absolute;
+/*se ubican a la derecha los sub sub menus*/  
+    left: 170px;
+    background-image: url(../Imagen/huesos.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+
+.encabezado nav ul li ul{
+  /*Con esta etiqueta lo que hacemos es ocultar los sub menus*/
+    display: none;
+}
+.encabezado nav ul li:hover > ul{
+    /*Y cuando pasen el cursor por la primera etiqueta li o la padre de todas aparencan*/
+    display: block;
+}
+
+/*Se quita la line que por defecto tiene un link y se le agrega un espacio de alto y de ancho a todas las letras
+y con el disply:block ocupa todo el ancho que puede tener cada letra */
+li a{
+    font-family: 'Berkshire Swash', cursive;
+    text-decoration: none;
+    font-size:25px;
+    color: rgb(243, 227, 6);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(84, 173, 217), 0 0 0.2em rgb(212, 82, 12);
+ 
+
+    
+    /*Espacio de relleno de la caja alto y ancho */
+    padding: 12px 20px ;
+    /*para que las letras ocupen todo el ancho que puedan pero verticalmente */
+    display: block;
+    /*Con este valor las letras seran mas gruesas y tambien puede ponerla en negrilla*/
+    font-weight: 600;
+}
+/*Cada vez que se pase el cursor por los menus y sub menus van a cambiar de color*/
+a:hover{
+    background:#f6c687;
+    
+    border-radius: 20px;
+}
+/*definimos un margen superior cuando tenemos desplazamientos en una seccion de la pagina se le agrega a todos las secciones ya que si no por motivo del menu pegajoso quedaria encima del lugar donde queremos ir */
+#Caracteristicas,
+#personalidad,
+#Nocomer,
+#Chocolate,
+#Ajo,
+#Alcohol{
+   scroll-margin-top: 5ex;
+}
+
+/*para que el cambio de una secion de la pagina no sea tan brusco*/
+html{
+    scroll-behavior:smooth;
+}
+
+
+
+
+/*En esta parte le agregamos estilos a la parte inicial donde esta las imagenes con slider */
+
+.Slider{
+width: 100%;
+height: 600px;
+/*Para ocultar las imagenes que se muestran horizontalmente*/
+overflow: hidden;
+margin: auto;
+
+}
+.Slider ul{
+    /*Para Que la imagenes se muesten horizontalmente */
+    display: flex;
+    padding: 0%;
+    width: 400%;
+    animation: cambio 20s infinite;
+    /*para que cambie las imagenes que tenemos en 20 segundos y sea infinito la forma de cambiar*/
+    animation-direction: alternate;
+    /*Cuando termine de pasar todas las imagenes se devuelva por donde viene*/
+    animation-timing-function:step-start;
+
+}
+
+.Slider li {
+    width: 170%;
+    list-style: none;
+}
+.Slider img{
+    width: 100%;  
+    height: 60%;
+}
+/*los Keyframes piden selectores adentro pero no llevan 
+nombres solo porcentajes o palabras claves permiten controlar el flujo de la animacion animation-name:Nombre*/
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left:0;}
+    
+    25%{margin-left:-100%;}
+    45%{margin-left:-100%;}
+    
+    50%{margin-left:-200%;}
+    70%{margin-left:-200%;}
+    
+    75%{margin-left:-300%;}
+    100%{margin-left:-300%;}
+
+}
+
+
+.text{
+    text-align: center;
+    background: transparent;
+  margin-bottom: 0%;
+   
+}
+   
+.text h1{
+   
+    color: rgb(234, 166, 30);
+    padding: 5px 15px ;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(1, 24, 233), 0 0 0.2em rgb(1, 25, 74);
+    /*Agregue un estilo de funetes desde Google Font*/
+    font-family: 'Berkshire Swash', cursive;
+    background: transparent;
+    position: relative;
+    
+}
+.text h1 span{
+    position: absolute;
+    border-left: 1px solid #3b94e8;
+     animation: Maquina 5s infinite alternate steps(42);
+     right: 0;
+     width: 0%;
+     
+     background-image: url(../Imagen/huesos.jpg);
+     background-repeat: no-repeat;
+     background-size:cover;    
+}
+
+@keyframes Maquina{
+    from {width:100%;}
+    to{ width:0;}
+
+}
+
+.text p{
+    font-size:25px;
+    font-family: 'Berkshire Swash', cursive;
+   /* background-image: url(../Imagen/paisaje.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;*/
+    align-items: center;
+    background: transparent;
+    color: #f5f859;
+       text-shadow: 1px 1px 2px black, 0 0 1em rgb(1, 24, 233), 0 0 0.2em rgb(1, 25, 74);
+   
+}
+
+
+.Historia{
+    background-color: burlywood;
+    font-size: x-large;
+    padding: 5px 20px;
+
+}
+.Historia img{
+    float:right;
+    width:30%;
+    height:50%;
+}
+.Historia p{
+    padding: 30px;
+    height: 100%;
+    font-size: 25px;
+    /* familia de fuente de google font*/
+    font-family: 'Charm', cursive; 
+  
+    
+}
+
+.Historia h1{
+    text-align: center;
+    padding: 20px 50px;
+    /*Familia de fuentes ruta Relativa Relacionada al inicio de css*/
+    font-family: AdorFuent;
+    font-size: 150px;
+    color:rgb(21, 20, 19);
+    text-shadow: 1px 1px 2px rgb(223, 198, 198), 0 0 1em rgb(250, 63, 6), 0 0 0.2em rgb(237, 62, 3);
+  
+}
+
+.Nota{
+    background-color: rgb(172, 196, 241);
+  
+}
+.info{
+    background-color: burlywood;
+    margin-left: auto;
+
+}
+.info p {
+    font-size: 25px;
+    padding: 20px 50px;
+    
+}
+
+.info video{
+float:right;
+border-radius: 50px;
+padding-right: 30px;
+}
+
+.info video:hover{
+    transform: scale(0.9);
+    transition: all 0.5s linear;
+   } 
+
+.Caract{
+    background-color: burlywood;
+    font-size: x-large;
+    padding: 20px 50px;
+    
+
+}
+.Caract img{
+  font-size: large;
+  
+}
+
+.Caract img:hover{
+    transform: scale(0.9);
+    transition: all 0.5s linear;
+   } 
+.Caract p{
+    color: #021e2f;
+    padding: 20px 50px;
+    font-family: 'Lobster', cursive;
+  font-size: 30px;
+  color: rgb(1, 103, 121);
+
+    
+} 
+audio{
+
+    width: 42%;
+    margin-left: 51%;
+    
+}
+
+
+.Tabla{
+    /*Para ubicar todo el texto a la izquierda*/
+   text-align: left;
+   background-color: rgb(244, 238, 181);
+   width: 50%;
+   /*Para eliminar doble borde entre celdas y que quede solo uno*/
+   Border-collapse:collapse ;
+   font-size: 25px;
+   float: left;
+   margin-top: 28px;
+   margin-right: 10px;
+   font-family: 'Lobster', cursive;
+  
+}
+
+th,td{
+    /*para darle un borde a las tablas */
+    Border:Solid 1px Black ;
+
+
+}
+
+thead{
+    background-color: rgb(231, 196, 45);
+    /*Se le agrega un borde a las letras que estan encabezando*/
+    border-bottom:solid 4px #0f362d; 
+}
+.Tabla:hover{
+    /*Se puede cambiar el cursosr en este caso es un mano y pointer es con el dedo*/
+    cursor: grab;
+   
+}
+tr:hover{
+    background-color: rgb(231, 196, 45);
+}
+/*-----------------------------------------Fin Tabla-----------------------------------------------------*/
+.personalidad{
+    background-color: burlywood;
+    font-size: x-large;
+  padding: 40px;
+}
+
+
+/*Este valor es para los videos desde youtube */
+.personalidad iframe{
+padding: 20px;
+margin-left: 50px;
+    
+}
+/*Estos valores son para las listas ordenadas que estan al inicio de personalidad*/ 
+.personalidad ol{
+   margin-left: 30%;
+   font-size: 30px;
+   font-family: 'Lobster', cursive;
+   color: rgb(1, 103, 121);
+}
+ .personalidad p {
+  font-size: 30px;
+ }
+
+
+.Alimento{
+    /*para haceer un degradado utilizamos estos valores*/
+    /*background: linear-gradient(130deg,rgb(233, 200, 114),#e83b59);*/
+    background-color: burlywood;
+}
+
+.Alimento p{
+    font-size: xx-large;
+    padding: 20px 50px;
+    
+   
+  
+    
+}
+
+.Slider2{
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    overflow: hidden;
+
+
+}
+.Slider2 ul{
+  display: flex;
+  /*Definimos el nombre de la animacion y el tiempo que va a durar cada animacion seguido de cuantas veces van a pasar*/
+  animation:comida 3s infinite linear   ;
+  /*Cuando llegue a la ultima foto se devuelve otra vez hacia atras */
+  animation-direction: alternate;
+  /*Con este valor definimos la forma de como van a pasar las imagenes*/
+  animation-timing-function:step-start;
+
+}
+
+.Slider2 li{
+    /*Se quita los puntos que por defecto tiene la lista*/
+    list-style:none;
+}
+.Slider2 img{
+    /*Anchura*/
+    width: 300px;
+    /*Altura*/
+    height: 300px;
+   padding: 20px;
+    
+ 
+}
+
+
+@keyframes comida{
+0%{margin-left: 0;}
+20%{margin-left:0;}
+
+25%{margin-left:-100%;}
+45%{margin-left:-100%;}
+
+50%{margin-left:-200%;}
+70%{margin-left:-200%;}
+
+75%{margin-left:-300%;}
+100%{margin-left:-300%;}
+}
+
+.NoComer{
+    background-color: burlywood;
+ 
+}
+
+
+.NoComer p{
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 20px 50px;
+    
+}
+
+.NoComer dl {
+    padding: 20px 80px;
+}
+
+.NoComer dl dt{
+    font-size: 50px;
+    background: #eaa352;
+    color: rgb(147, 44, 0);
+    font-family: 'Tapestry', cursive;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+}
+
+.NoComer dd {
+    font-size: 30px;
+    padding: 15px;
+   
+}
+
+.Educación{
+    background-color: burlywood;  
+  
+}
+.Educación video{
+
+
+padding-right: 10%;
+float: right;
+width: 17%;
+
+}
+
+
+
+.Educación h5{
+    font-size: 50px;
+    font-family: 'Berkshire Swash', cursive;
+    padding:15px 20px;
+text-align: center;
+color: rgb(241, 94, 2);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+   
+}
+
+.Educación p{
+    font-size: 30px;
+   
+    padding: 20px 50px;
+}
+
+
+
+
+.Relación{
+ 
+    background-color: burlywood;
+    
+   
+}
+
+.Relación p{
+    font-size: 30px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 20px 50px;
+}
+
+.Relación img{
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.Relación video{
+    margin-left: 20px;
+}
+
+
+
+
+
+/*-----------------------------------------INICIO DEL PIE DE PAGINA--------------------------------*/
+footer{
+    width: 93.1%;
+    padding: 50px;
+    /*Con esta etiqueta creamos un degradado con 3 colores, si queremos agregar mas colores solo debemos agregar una coma al ultimo color y # para agregar los valores 
+    background: linear-gradient(130deg,rgb(233, 200, 114),#049fc5,#a0a14f);*/
+    background-image: url(../Imagen/verde.jpg);
+background-repeat: no-repeat;
+background-size:cover; 
+background-attachment: fixed;
+background-position: center;
+}
+
+.pie_Pagina .logo img{
+    width: 80px;
+    margin-left: 100px;
+    
+}
+
+.pie_Pagina{
+    /*Pone las columnas una a lado de la otra*/
+    display: flex;
+    /*Si no caben en una linea ella la columna que esta al final de la derecha pase a la linea de abajo*/
+    flex-wrap: wrap;
+    /*para que ocupen el ancho completo de la pagina*/
+    justify-content: space-between;
+/*La max-width propiedad define el ancho máximo de un elemento.*/
+    max-width: 1200px;
+    /*para centrar todo el contenido*/
+    margin:auto;
+    margin-top: 10px;
+    background: linear-gradient(130deg,rgba(228, 100, 8, 0.779),#216bff,#eed80d);
+}
+
+.caja{
+display: flex;
+flex-direction: column;
+padding: 40px;
+
+}
+
+.caja .parrafo{
+    max-width: 350px;
+    /*Margen hacia arriba*/
+    margin-top: 20px;
+    /*Esta propiedad se utiliza para poner las letras mas gruesas estilo negrilla*/
+    font-weight: 800;
+    /*Tamaño de la letra*/
+    font-size: 15px;
+}
+
+.caja .parrafo .Agradecimiento{
+    font-size: 25px;
+    color: #e7c712;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+    font-family: 'Tapestry', cursive;
+}
+
+.caja h2{
+    /*Margen hacia abajo*/
+margin-bottom: 30px;
+color: rgb(219, 181, 8);
+font-weight: 800;
+margin-top: 100px;
+text-shadow: 1px 1px 2px black, 0 0 1em rgb(232, 122, 12), 0 0 0.2em rgb(137, 161, 210);
+font-family: 'Tapestry', cursive;
+}
+
+.caja a{
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.caja a:hover{
+    background-color: burlywood;
+}
+
+.DerechoA{
+    /*Esta propiedad me sirve para centrar el parrafo*/
+    text-align: center;
+    color: #d3dae1;
+    font-size: 40px;
+}
+/*Estilos Para la imagen de adoptame*/
+.adopción{ 
+
+   position:fixed;
+   bottom: 20px;
+  right: 0px;
+ 
+}
+
+.adopción img{
+    border-radius: 50%;
+}
+
+.adopción h1{
+    font-size: 25px;
+    color: #f3d512;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+    margin-right: 10px;
+    background-color: #14bbe4;
+    padding: 5px;
+}
+
+.adopción:hover{
+    transform: scale(0.9);
+   
+   }
+
+   .icon-facebook{
+    color: rgb(153, 153, 226);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(98, 111, 228), 0 0 0.2em rgb(0, 37, 112);
+    padding: 10px;
+    
+}
+
+.icon-twitter{
+    color: rgb(62, 178, 255);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+    padding: 10px;
+
+}
+
+
+.icon-youtube{
+    color: rgb(252, 45, 45);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+    padding: 10px;
+    font-size: 25px;
+}
+
+.icon-whatsapp{
+    color:#52ef0f;
+    text-shadow: 1px 1px 2px rgb(65, 211, 12), 0 0 1em rgb(148, 225, 120), 0 0 0.2em rgb(87, 239, 22);
+    padding: 10px;
+  
+    
+   
+}
+
+
+

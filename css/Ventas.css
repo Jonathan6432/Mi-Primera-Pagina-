@@ -1,0 +1,346 @@
+*{
+    margin: 0%;
+    padding: 0;
+   
+}
+
+
+.encabezado{
+background-image: url(../Imagen/estrellas.jpg);
+background-repeat: no-repeat;
+background-size:cover; 
+background-attachment: fixed;
+background-position: center;
+position:sticky;
+ }
+
+ a img{
+     width: 90px;
+     
+    
+ }
+ 
+ div a h2{
+
+text-decoration: none;
+list-style:none;
+ font-size: 30px;
+ margin-right:100px;
+ color: rgb(238, 181, 25);
+ text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+ /*Este valor le da sombra al texto */
+ }
+ 
+ div a h2:hover{
+     transform: scale(0.9);
+     transition: all 0.7s linear;
+    }
+ /*se activa el display flex y con jusify-content los menus se distribuyen uniformemete vertical
+ de manera que el espacio entre ellos sea el mismo con el de la imagen y el titulo  */
+ .encabezado nav{
+ display: flex;
+ justify-content:space-around;
+ align-items: center;
+ padding: 20px;
+ }
+ 
+ .padre{
+    /*Este valor le da sombra al texto */
+    
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+     
+ 
+ }
+ .encabezado nav ul{
+    list-style:none;
+    display: flex;
+    justify-content: space-around;
+    font-size:x-large;
+    padding: 10px;
+    /*Si los elementos no caben en una linea pasan a la siguiente linea*/
+    flex-wrap: wrap;
+ }
+    
+ /*Se quita la line que por defecto tiene un link y se le agrega un espacio de alto y de ancho a todas las letras
+ y con el disply:block ocupa todo el ancho que puede tener cada letra */
+ li a{
+    
+     text-decoration: none;
+     font-size:30px;
+     color: rgb(243, 227, 6);
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+  
+     /*Espacio de relleno de la caja alto y ancho */
+     padding: 12px 20px ;
+     /*para que las letras ocupen todo el ancho que puedan pero verticalmente */
+     display: block;
+     /*Con este valor las letras seran mas gruesas y tambien puede ponerla en negrilla*/
+     font-weight: 600;
+ }
+ /*Cada vez que se pase el cursor por los menus y sub menus van a cambiar de color*/
+ li a:hover{
+     background:#f5a564;
+     
+     border-radius: 20px;
+ }
+
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+    /*Con el hidden valor, el desbordamiento se recorta y el resto del contenido se oculta:*/
+    overflow: hidden;
+    color: blueviolet;
+}
+
+/*En esta parte le agregamos estilos a la parte inicial donde esta las imagenes con slider */
+
+.Slider{
+    width: 100%;
+    height: 500px;
+    /*Para ocultar las imagenes que se muestran horizontalmente*/
+    overflow: hidden;
+    margin: auto;
+   
+    
+    }
+   
+    .Slider ul{
+        /*Para Que la imagenes se muesten horizontalmente */
+        display: flex;
+        width: 400%;
+        animation: cambio 20s infinite;
+        /*para que cambie las imagenes que tenemos en 20 segundos y sea infinito la forma de cambiar*/
+        animation-direction: alternate;
+        /*Cuando termine de pasar todas las imagenes se devuelva por donde viene*/
+        animation-timing-function:step-start;
+        position: relative;
+    
+    }
+
+    .Parrafo{
+        position: absolute;
+        background: transparent;
+        padding: 30px;
+        font-size: 50px;
+        color: #0481f5;
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+        text-align: center;
+
+        
+    }
+    
+    .Slider li {
+        width: 170%;
+        list-style: none;
+    }
+    .Slider img{
+        width: 100%;  
+        height: 60%;
+    }
+    /*los Keyframes piden selectores adentro pero no llevan 
+    nombres solo porcentajes o palabras claves permiten controlar el flujo de la animacion animation-name:Nombre*/
+    @keyframes cambio {
+        0%{margin-left: 0;}
+        20%{margin-left:0;}
+        
+        25%{margin-left:-100%;}
+        45%{margin-left:-100%;}
+        
+        50%{margin-left:-200%;}
+        70%{margin-left:-200%;}
+        
+        75%{margin-left:-300%;}
+        100%{margin-left:-300%;}
+    
+    }
+    
+    /*.Parrafo{
+      background-color: #f3a463;
+    }
+    .Parrafo h1{
+     padding: 15px;
+    font-size: 50px;    
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+    color: #666563;
+  
+    }
+    .Parrafo p{
+        padding: 15px;
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+        color: #0c0902;
+        
+      
+    }*/ 
+    
+    .Tienda{
+        background-color: #f5d682;
+    }
+
+    .Tienda h1{
+        padding: 15px;
+        font-size: 50px;    
+        text-align: center;
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+        color: #0567e7;
+     
+
+    }
+    .Iconos1 {
+        font-size: 30px;
+        }
+
+    .Iconos {
+    font-size: 30px;
+     display: flex;
+    justify-content:end;
+    margin-right: 20px;
+     
+    }
+    .Iconos a {
+        text-decoration: none;
+        color: #0c0902;
+        margin-right: 15px;
+       
+    }
+    .icono1 {
+        text-decoration: none;
+        color: #0c0902;
+       font-size: 30px;
+      
+       
+     
+    }
+
+    .icon-telephone{
+        color: #208bee;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+font-size: 40px;
+        
+        
+    }
+    .icon-user-2{
+        color: #208bee;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        margin-left: 10px;
+        
+
+    }
+    .icon-basket{
+        color: #208bee;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+       margin-left: 10px;
+        
+
+    }
+  hr{
+    color: #000000;
+    margin-right: 10px;
+    
+   
+  }
+/*valores para el form*/
+    .Buscador{
+        display: flex;
+        background-color: #f5d682;
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(4, 33, 48), 0 0 0.2em rgb(12, 159, 212);
+       justify-content: center;
+       width: 100%;
+        margin-top: 2%;
+        font-size: 40px;
+        position: relative;
+    padding-bottom: 10px;     
+       
+    }
+    
+    .Buscador input{
+        width: 50%;
+        padding: 1px;
+        border-radius: 20px;
+        font-size: 30px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        box-shadow: 10px 10px 5px rgb(37, 47, 51);
+        padding: 15px;
+
+    }
+    .Buscador button{
+        background-color: #208bee;
+        height: 70px;
+        width: 80px;
+        border: 1px solid grey;
+        cursor: pointer;
+        border-radius: 15px;
+        position: absolute;
+        right: 333px;
+        
+        
+    }
+  
+    
+
+    .Buscador i{
+        font-size: 40px;
+        text-shadow: 1px 1px 2px rgb(63, 170, 241), 0 0 1em rgb(4, 33, 48), 0 0 0.2em rgb(209, 235, 243);
+
+        
+    }
+   .icon-search :hover{
+        color: #eed80d;
+
+    }
+    
+    
+   
+    /* pseudo elemento para cambiar color y tamaño al texto de ayuda en el form*/
+    ::placeholder{
+        color: #0481f5;
+        font-size: 25px;
+        font-weight:700;
+        text-align: center;
+        
+       
+    }
+
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 50px;
+        margin-top: 20px;
+        margin-right: 50px;
+        margin-left: 10px;
+        margin-bottom: 50px;
+        
+        text-align: center;
+        
+        
+    }
+
+    .imagen{
+        padding:3%;
+        border: solid 1px black;
+        text-align: center;
+        background-color: bisque;
+    
+      
+    }
+
+    .imagen img{
+
+        width: 400px;
+        height: 200px;
+       
+    }
+    .productos p{
+        background-color: #f1eaa5;
+        padding: 30px;
+        font-size: 30px;
+        display: flex;
+        justify-content:space-between
+    }
+
+    .imagen a{
+        text-decoration: none;
+    }

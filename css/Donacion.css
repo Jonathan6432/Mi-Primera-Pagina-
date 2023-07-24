@@ -1,0 +1,218 @@
+*{
+    margin: 0%;
+    padding: 0;
+ 
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.encabezado{
+background-image: url(../Imagen/estrellas.jpg);
+background-repeat: no-repeat;
+background-size:cover; 
+background-attachment: fixed;
+background-position: center;
+position:sticky;
+ }
+
+ a img{
+     width: 70px;
+     
+    
+ }
+ 
+ div a h2{
+
+text-decoration: none;
+list-style:none;
+ font-family: 'Berkshire Swash', cursive;
+ font-size: 30px;
+ margin-right:200px;
+ color: rgb(243, 180, 6);
+ text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+
+ }
+ 
+ div a h2:hover{
+     transform: scale(0.9);
+     transition: all 0.7s linear;
+    }
+ /*se activa el display flex y con jusify-content los menus se distribuyen uniformemete vertical
+ de manera que el espacio entre ellos sea el mismo con el de la imagen y el titulo  */
+ .encabezado nav{
+ display: flex;
+ justify-content:space-around;
+ align-items: center;
+ padding: 20px;
+ }
+ 
+ .padre{
+    
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+     
+ 
+ }
+ .encabezado nav ul{
+    list-style:none;
+    display: flex;
+    justify-content: space-around;
+    font-size:x-large;
+    padding: 10px;
+    flex-wrap: wrap;
+ }
+    
+ /*Se quita la line que por defecto tiene un link y se le agrega un espacio de alto y de ancho a todas las letras
+ y con el disply:block ocupa todo el ancho que puede tener cada letra */
+ li a{
+     font-family: 'Berkshire Swash', cursive;
+     text-decoration: none;
+     font-size:25px;
+     color: rgb(243, 227, 6);
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+  
+     /*Espacio de relleno de la caja alto y ancho */
+     padding: 12px 20px ;
+     /*para que las letras ocupen todo el ancho que puedan pero verticalmente */
+     display: block;
+     /*Con este valor las letras seran mas gruesas y tambien puede ponerla en negrilla*/
+     font-weight: 600;
+ }
+ /*Cada vez que se pase el cursor por los menus y sub menus van a cambiar de color tambien los iconos*/
+ a:hover{
+     background:#8dcfeb;
+     border-radius: 20px;
+ }
+
+header{
+    width: 100%;
+    position: relative;
+    
+}
+
+video{
+  
+    /*Se ubica sobre o dentro del padre o el contenedor mas sercano que tenga el posicionamito relative*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*el video ocupara el ancho y el alto completo del contendedor padre*/
+    object-fit: cover;
+   
+}
+
+.ContenedorTotal{
+
+   display: flex;
+    align-items: center;
+    position: relative;
+     /*coloca el contenedor encima del video*/
+    z-index: 2;
+    width: 50%;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+}
+.Titulo h1, .CodigoQR h2{
+    padding: 15px;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: linear-gradient(130deg,rgba(246, 108, 10, 0.779),#93aad7,#37bcff);
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(46, 152, 205), 0 0 0.2em rgb(12, 159, 212);
+    color: #ecb10f;
+    text-align: center;
+    font-family: 'Tapestry', cursive
+}
+
+.CodigoQR{
+    padding: 5%;
+}
+
+.CodigoQR:hover{
+    transform: scale(0.9);
+   }
+   /*con este hover se le agrega un cursor cuando el usuario pase por el QR */
+.CodigoQR:hover{
+    cursor: pointer;
+
+}
+
+   footer{
+    top:20%;
+    position: relative;
+    background: transparent;
+   padding: 5%;
+   }
+   footer .Titulo1{
+       color: rgb(2, 193, 241);
+           text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+       text-align: center;
+       font-size: 50px;
+       padding-bottom: 5%; 
+   }
+   
+   
+   footer .copy{
+       color: rgb(243, 238, 237);
+       font-size: 20px;
+       text-align: center;
+       padding-top: 10px;
+   }
+   
+   .redes{
+  display: flex;
+       font-size: 40px;
+     justify-content: space-around;
+   }
+   .icon-facebook{
+       color: blue;
+       text-shadow: 1px 1px 2px black, 0 0 1em rgb(98, 111, 228), 0 0 0.2em rgb(0, 37, 112);
+   }
+   
+   .icon-twitter{
+       color: rgb(62, 178, 255);
+       text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+   }
+   
+   .icon-youtube{
+       color: red;
+       text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+   }
+   
+   .icon-whatsapp{
+       color:#52ef0f;
+       text-shadow: 1px 1px 2px rgb(65, 211, 12), 0 0 1em rgb(148, 225, 120), 0 0 0.2em rgb(87, 239, 22);
+      
+   }
+
+   .adopción{
+
+    position:fixed;
+    bottom: 20px;
+   right: 0px;
+  
+ }
+ 
+ .adopción img{
+     border-radius: 50%;
+ }
+ 
+ .adopción h1{
+     font-size: 25px;
+     color: #f3d512;
+     text-shadow: 1px 1px 2px black, 0 0 1em rgb(12, 34, 232), 0 0 0.2em rgb(0, 37, 112);
+     margin-right: 10px;
+ }
+ 
+ .adopción:hover{
+     transform: scale(0.9);
+    
+    }
+ 

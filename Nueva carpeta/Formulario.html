@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/Nueva carpeta/Formulario.css" />
+</head>
+
+<body>
+    <header>
+
+    <h1>Mi Primer Formulario</h1>
+<img src="./Imagen/TATAN.png" alt="Logo">
+
+</header>
+
+<form action="/URL Ejemplo.html">
+    <fieldset class="Formulario">
+        <legend>  Datos Personales </legend>
+        <br>
+    <!-- Elemento etiqueta o label -->
+    <label for="P_Nombres">Primer Nombre :</label>
+    <!-- Elemento o cuadro de texto para que el usuario digite el PNombre-->
+ <input type="text" name="Nombre" id="P_Nombre" placeholder="Ingrese su primer nombre" maxlength="15" minlength="3" size="25" required> </imput> <br>
+ <br>
+    <!--Elemento etiqueta o label -->
+    <label for="S_Nombres">Segundo Nombre :</label>
+    <!-- Elemento o cuadro de texto para que el usuario digite el SNombre-->
+    <input type="text" name="Nombre" id="S_Nombre" placeholder="Ingrese su segundo nombre" maxlength="15" minlength="3" size="25"> </input> <br>
+    <br>
+     <!--Elemento etiqueta o label -->
+     <label for="P_Apellido">Primer Apellido : </label>
+      <!-- Elemento o cuadro de texto para que el usuario digite el Papellido-->
+      <input type="text" id="P_Apellido" placeholder="Ingrese su primer apellido" maxlength="15" minlength="3" size="25" required> </imput> <br>
+     <br>
+      <!--Elemento etiqueta o label -->
+   <label for="S_Apellido"> Segundo Apellido : </label>
+    <!-- Elemento o cuadro de texto para que el usuario digite el Sapellido-->
+   <input type="text" id="S_Apellido" placeholder="Ingrese su segundo apellido" maxlength="15" minlength="3" size="25"> </imput> <br>
+   <br>
+   <!--Elemento etiqueta o label -->
+   <label for="Email">Email : </label>
+    <!-- Elemento o cuadro de texto para que el usuario ingrese el email-->
+   <input type="Email" id="Email" name="email" pattern="[a-z0-9._%*-]+@ [a-z0-9.-] +\.[a-z] {2,} $" size="25" 
+   placeholder="Ejemplo@email.???.??" maxlength="30" required> </imput><br>
+   <br>
+    <!--Elemento etiqueta o label -->
+   <label for="T_Documento">Tipo De Documento : </label>
+   <!--Elemento lista despegable -->
+   <Select id="T_Documento">
+       <option value=""> Tarjeta de identidad</option>
+       <option value="">Cedula de ciudadania</option>
+       <option value="">Pasaporte</option>
+   </Select><br>
+    <br>
+   <!--Elemento etiqueta o label -->
+<label for="N_Documeto">Numero De Documento : </label>
+<!-- Elemento o cuadro de texto para que el usuario ingrese el Numero de documento-->
+<Input type="text" id="N_Documento" Name="NDocumento"placeholder="Ingrese su numero de documento" pattern="[0-9]" maxlength="15" minlength="5" size="30" required ></Input> <br>
+<br>
+   <!--Elemento etiqueta o label -->
+
+<label for="F_Nacimiento">Fecha De Nacimiento :</label>
+<!-- Elemento o cuadro de texto para que el usuario ingrese la fecha de nacimiento-->
+
+<Input type="Date" id="F_Nacimiento" name="FNacimento" required></Input> <br>
+<br>
+   <!--Elemento etiqueta o label -->
+<label for="Genero"> Genero:</label> <br>
+<!--Elemento de botones para seleccionar un tipo de genero-->
+<p><input type="Radio" id="G_femenino" name="Genero"> Femenino <br> </input>
+<input type="Radio" id="G_masculino" name="Genero"> Masculino <br></input>
+<input type="Radio" id="G_Otro" name="Genero"> Otro </input> <br> </p>
+   <!--Elemento etiqueta o label -->
+<p><label for="Color">Color: </label><br>
+<!--Elemento de caja para elegir varias opciones-->
+<input type="checkbox" name="Rojo" id="C_Rojo">Rojo </input><br>
+<input type="checkbox" name="Verde" id="C_Verde">Verde </input> <br>
+<input type="checkbox" name="Azul" id="C_Azul">Azul </input> </p> <br>
+<br>
+   <!--Elemento etiqueta o label -->
+<label for="Observaciones">Observaciones</label><br>
+<!--Elemento para que el usuario pueda escribir lineas de texto-->
+<textarea name="Observaciones" id="Observaciones" cols="50" rows="10"></textarea><br>
+<br>
+<!--Elemento para crear el boton-->
+<Button type="reset" id="btn_rst">Limpiar </Button><br>
+<button type="submit+" id="btn_env"> Aceptar </button><br>
+
+</fieldset>
+
+</form>
+
+<Section class="Animacion">
+   <h1 class="borde"> Este es la animacion
+       </h1>
+</Section>
+
+
+<!------------Esta parte es para otra pagina-->
+
+<Section class="Comentario">
+   <form action="comentario">
+<h2>Deja un comentario</h2>
+<label for="P_Nombres">Nombre completo</label>
+<!-- Elemento o cuadro de texto para que el usuario digite el Nombre-->
+<input type="text" name="Nombre" id="P_Nombre" placeholder="Ingrese su nombre y apellidos" maxlength="50" minlength="3" size="25" required> </imput> <br>
+<!--Elemento etiqueta o label -->
+<label for="Email">Email : </label>
+<!-- Elemento o cuadro de texto para que el usuario ingrese el email-->
+<input type="Email" id="Email" name="email" pattern="[a-z0-9._%*-]+@ [a-z0-9.-] +\.[a-z] {2,} $" size="25" 
+placeholder="Ejemplo@email.???.??" maxlength="30" required> </imput><br>
+
+<label for="Titulo">Titulo</label>
+<!-- Elemento o cuadro de texto para que el usuario digite el Nombre-->
+<input type="text" name="Titulo" id="Titulo" maxlength="50" minlength="3" size="25" required> </imput> <br>
+<!--Elemento etiqueta o label -->
+<label for="Observaciones">Observaciones</label><br>
+<!--Elemento para que el usuario pueda escribir lineas de texto-->
+<textarea name="Observaciones" id="Observaciones" cols="50" rows="10"></textarea><br>
+<!--Elemento para crear el boton-->
+<Button type="reset" id="btn_rst">Limpiar </Button><br>
+<button type="submit+" id="btn_env"> Aceptar </button><br>
+</form>
+</Section>
+
+
+
+
+
+
+
+
+ 
+</body>
+</html>

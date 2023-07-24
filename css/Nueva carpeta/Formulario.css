@@ -1,0 +1,173 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-size:x-large;
+    background-image:url(../Imagen/tecnologia.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    
+} 
+header{
+    background-color: rgb(72, 117, 241);
+    display: flex;
+    justify-content: space-between;
+} 
+
+header img{
+    width: 70px;
+    border-radius:50%;
+    margin: 20px;
+
+}
+
+img:hover{
+ transform: scale(0.9);
+ transition: all 0.5s linear;
+}
+ 
+header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(33, 226, 210);
+    margin-left: 40px;
+}
+
+.Formulario{
+    background-color:rgb(3, 17, 43);
+    height:100%;
+    width:450px;
+    margin:auto;
+    padding:10px 20px;
+    border-radius: 20px;
+    color:aqua;
+
+}
+
+input,textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px;
+    box-sizing: border-box;
+
+}
+
+p{
+margin: bottom 10px;
+padding:2px;
+width:50px;
+}
+
+button{
+    background-color: rgb(72, 72, 117);
+    padding: 20px;
+    width:100%;
+    color:aqua;
+    font-size: x-large;
+    border-radius: 20px;
+    margin-bottom: 5px;
+
+}
+/*con este hover se le agrega un cursor cuando el usuario pase por el boton*/
+button:hover{
+    cursor: pointer;
+
+}
+/*Cuando el cursor pasa por el boton del formulario (aceptar y eliminar) el boton se mueve hacia adelante y atras  */
+
+button:hover{
+    transform: scale(0.9);
+   
+   }
+
+.borde{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.Animacion{
+    
+    position: relative;
+    margin: 10% auto 0;
+    width: 70%;
+    height: 200px;
+    background:linear-gradient(90deg #000 #323232)
+}
+
+.Animacion:before, .Animacion :after{
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    background:linear-gradient(120deg #79bf00, #8d01a0, #031ba5, #ff004c,
+    #e6036d, #fb0094, #ff6600, #04c2e4, #adad02, #00c3ff);
+    background-size: 300%;
+    width:calc(100% + 16px) ;
+    height: calc(100% + 16px );
+    z-index: 1;
+    animation-name:animacion 15s ease infinite
+
+}
+
+@keyframes animacion {
+    0%{
+        background-position: 0% 200%;
+    }
+
+    50%{
+     background-position: 200% 0%;   
+    }
+    100%{
+        background-position: 0% 330%;
+    }
+}
+
+/*para la primera pagina*/
+.Comentario{
+    background-color:rgb(3, 17, 43);
+    margin:auto;
+    padding:10px 20px;
+    border-radius: 20px;
+    color:aqua;
+
+}
+
+input,textarea{
+    
+    margin-bottom: 10px;
+    padding: 7px;
+    
+
+}
+
+p{
+margin: bottom 10px;
+padding:2px;
+width:50px;
+}
+
+button{
+    background-color: rgb(72, 72, 117);
+    padding: 20px;
+    width:100%;
+    color:aqua;
+    font-size: x-large;
+    border-radius: 20px;
+    margin-bottom: 5px;
+
+}
+/*con este hover se le agrega un cursor cuando el usuario pase por el boton*/
+button:hover{
+    cursor: pointer;
+
+}
+/*Cuando el cursor pasa por el boton del formulario (aceptar y eliminar) el boton se mueve hacia adelante y atras  */
+
+button:hover{
+    transform: scale(0.9);
+   
+   }
